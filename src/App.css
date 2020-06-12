@@ -106,12 +106,15 @@ h2 {
 }
 
 @media (max-width: 500px){
+
+  h1 {
+    font-size: 40px;
+  }
+
   .card {
     width: 300px;
     border: 2px solid #f4f4f4;
   }
-
-  
 
   .wrapper {
     width: 300px;
