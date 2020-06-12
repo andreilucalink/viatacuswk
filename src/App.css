@@ -7,6 +7,7 @@
 
 body {
   background-color: #0f0e17;
+  position: relative;
 }
 
 header {
@@ -36,7 +37,7 @@ h2 {
   color: white;
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 20px;
 }
 
@@ -64,6 +65,14 @@ h2 {
   margin-left: 10px;
 }
 
+.stop-div {
+  padding-top: 3rem;
+}
+
+.stop-btn {
+  display: block;
+  margin: auto;
+}
 
 .play-btn {
   height: 50px;
@@ -72,11 +81,11 @@ h2 {
 }
 
 .play-btn:hover {
+  cursor: pointer;
   /* transition: 0.4s ease all;
   transform: scale(1.2); */
   animation: crescendo 0.5s alternate infinite ease-in;
 }
-
 
 @keyframes crescendo {
   0%   {transform: scale(1);}
@@ -106,9 +115,18 @@ h2 {
 }
 
 @media (max-width: 500px){
+  .stop-div {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+  }
+
+  .play-btn:hover {
+    animation: none;
+  }
 
   h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .card {
@@ -120,4 +138,6 @@ h2 {
     width: 300px;
     grid-template-columns: repeat(1,1fr);
   }
+
+
 }
