@@ -1,38 +1,120 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #0f0e17;
+}
+
+header {
+  margin-top: 5rem;
+  color: #f4f4f4;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #a7a9be;
+  margin-top: 0.5rem;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.wrapper {
+  width: 1040px;
+  gap: 10px;
+  /* background-color: #a7a9be; */
+  margin: auto;
   color: white;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding-top: 5rem;
+  padding-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  padding: 10px;
+  border: 2px solid black;
+  width: 200px;
+  border-radius: 20px;
+  height: 100px;
+  display: flex;
+  transition: ease 0.6s all;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card:hover {
+  cursor: pointer;
+  transition: ease 0.6s all;
+  background-color: #f4f4f4;
+  background-color: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background-color: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #0f0e17;
+}
+
+.txt {
+  margin-left: 10px;
+}
+
+
+.play-btn {
+  height: 50px;
+  transition: 0.4s ease all;
+  z-index: 2;
+}
+
+.play-btn:hover {
+  /* transition: 0.4s ease all;
+  transform: scale(1.2); */
+  animation: crescendo 0.5s alternate infinite ease-in;
+}
+
+
+@keyframes crescendo {
+  0%   {transform: scale(1);}
+  100% {transform: scale(1.2);}
+}
+
+
+@media (max-width: 1100px){
+  .wrapper {
+    width: 840px;
+    grid-template-columns: repeat(4,1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    width: 640px;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    width: 440px;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 500px){
+  .card {
+    width: 300px;
+    border: 2px solid #f4f4f4;
+  }
+
+  
+
+  .wrapper {
+    width: 300px;
+    grid-template-columns: repeat(1,1fr);
   }
 }
