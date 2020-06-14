@@ -20,6 +20,11 @@ import Ezreal from './sounds/ezreal.mp3';
 import Ratat1 from './sounds/inplmderatat.mp3';
 import Aideplm from './sounds/hahaideplm.mp3';
 import Vbfrumos from './sounds/haivbfrumos.mp3';
+import Wonder from './sounds/wonder.mp3';
+import Sclavi from './sounds/sclavi.mp3';
+import Cupa from './sounds/cupaliceelor.mp3';
+import SaPisat from './sounds/sapisat.mp3';
+import PizdaLaMama from './sounds/inpizdalamama.mp3';
 
 /* import MixButton from 'mix-button'; */
 
@@ -46,6 +51,11 @@ let ezreal = new Audio(Ezreal);
 let ratat1 = new Audio(Ratat1);
 let aideplm = new Audio(Aideplm);
 let vbfrumos = new Audio(Vbfrumos);
+let wonder = new Audio(Wonder);
+let sclavi = new Audio(Sclavi);
+let cupa = new Audio(Cupa);
+let sapisat = new Audio(SaPisat);
+let pizdalamama = new Audio(PizdaLaMama);
 
 
 
@@ -162,6 +172,31 @@ function App() {
         vbfrumos.currentTime = 0;
         break;
       
+      case 'wonder':
+        wonder.pause();
+        wonder.currentTime = 0;
+        break;
+
+      case 'sclavi':
+        sclavi.pause();
+        sclavi.currentTime = 0;
+        break;
+
+      case 'cupa':
+        cupa.pause();
+        cupa.currentTime = 0;
+        break;
+      
+      case 'sapisat':
+        sapisat.pause();
+        sapisat.currentTime = 0;
+        break;
+      
+      case 'pizdalamama':
+        pizdalamama.pause();
+        pizdalamama.currentTime = 0;
+        break;
+
       default: 
         return;
     }
@@ -256,6 +291,31 @@ function App() {
         <div className="card" onClick={() => {stopSound();playSound(vbfrumos); setCurrent('vbfrumos')}}>
           <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
           <span className="txt">Hai vorbeşte frumos</span>
+        </div>
+        <div className="card" onClick={() => {stopSound();playSound(wonder); setCurrent('wonder')}}>
+          <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
+          <img src={require('./img/new.svg')} alt="New" className="new-btn"/>
+          <span className="txt">Wonder</span>
+        </div>
+        <div className="card" onClick={() => {stopSound();playSound(sclavi); setCurrent('sclavi')}}>
+          <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
+          <img src={require('./img/new.svg')} alt="New" className="new-btn"/>
+          <span className="txt">Sclavi</span>
+        </div>
+        <div className="card" onClick={() => {stopSound();playSound(cupa); setCurrent('cupa')}}>
+          <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
+          <img src={require('./img/new.svg')} alt="New" className="new-btn"/>
+          <span className="txt">Cupa Liceelor</span>
+        </div>
+        <div className="card" onClick={() => {stopSound();playSound(sapisat); setCurrent('sapisat')}}>
+          <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
+          <img src={require('./img/new.svg')} alt="New" className="new-btn"/>
+          <span className="txt">S-a pişat</span>
+        </div>
+        <div className="card" onClick={() => {stopSound();playSound(pizdalamama); setCurrent('pizdalamama')}}>
+          <img src={require('./img/video.svg')} alt="PLAY" className="play-btn"/>
+          <img src={require('./img/new.svg')} alt="New" className="new-btn"/>
+          <span className="txt">În pizdă la mama</span>
         </div>
         
       </div>
